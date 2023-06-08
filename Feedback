@@ -1,0 +1,18 @@
+Case 2
+b ii) so threshold can be 0.5 c iv) Using the commands PredictedRisk = predict(LoansLogReg, type = "response",newdata = LoansTest) predicts the probabilities of NotFullyPaid and the command table(LoansTest$NotFullyPaid, PredictedRisk > 0.5) creates the confusion matrix for a threshold value of 0.5.
+The accuracy of the logistic regression model on the test set using a threshold of 0.5 is 0.8402. This is slightly lower than the accuracy of the baseline model on the test set. To add these calculated probabilities to the test data, use the command LoansTest$PredictedRisk = PredictedRisk c v) ROCRpred = prediction(PredictedRisk, LoansTest$NotFullyPaid) as.numeric(performance(ROCRpred, "auc")@y.values) 
+The test set AUC of the model is 0.675. Yes, we think this model could be useful to an investor to make profitable investments. Although the accuracy (with a threshold of 0.5) does not beat that of the baseline model, the AUC tells us that the model still has some value over the simple baseline, especially for different thresholds. Prediction in financial applications is often challenging, but in this particular case our model can still give
+us an edge over just using a simple baseline model according to the AUC.
+
+
+
+
+Case 3
+e ii) Others could be "Time of the day the revision is made", "Information about history of the user making the change", "Actual content/ words added or removed" e iii) The independent variables themselves have no relation to the language page, so the model could easily be used for other pages. However, it could be that the variables important for predicting vandalism for the language page are not as important for other pages,
+and that the model would have to be re-calibrated for each type of page.
+
+
+
+Case 4
+
+a i) influence what aspect of clustering - computation of DISTANCES between points b iv) More than the visual proximity of points, whether we need more or less clustering is determined by interpreting properties of the cluster.
